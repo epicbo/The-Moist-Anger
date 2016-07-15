@@ -1,6 +1,12 @@
 #Combat Design
 A combat is a situation that can occur to the party, whilst traveling or during a dungeon. 
 
+[Combat Field](#combat-field)
+
+[Combat Targeting](#combat-targeting)
+
+[Core Combat Mechanics](#core-combat-mechanics)
+
 ##Combat Field
 The combat field is divided into **two** five by four (*5x-4y*) rectangles placed horizontally adjecent to each other. Each field represents a teams formation. One team's entites can **never** enter another teams field. 
 - Each square can only be occupied by a single entity at a time.
@@ -13,7 +19,7 @@ Any skill have three representations in it's tooltip.
 2. The positional sqaures which cam be any or all positions in a field.
 3. The area of effect which can be any arbitrary numbers of positions **relative** to the target location. 
 
-##Core combat mechanics
+##Core Combat Mechanics
 - Blocking - Some characters have to option block his or her square, preventing missiles and attacks to pass through their sqaure.
 - Movement - **All** characters have a basic move option. Armour and class changes how far a character can move and some characters might be better at advancing than retreating or vice versa. 
 - Movement as part of other skill - Many skills will have movement as part of their skill. A shield charge might reqire you to be in a position further back as it will move you forward certain amount of positions. The distance travelled may influence a skills potency.
