@@ -21,8 +21,8 @@ This is just the primary stats though and soem secondary stats might affect cert
 | **Heavy Melee**  | 1st | 2nd | 3rd | 4th |
 | **Light Melee**  | 2nd | 1st | 3rd | 4th |
 | **Ranged Attack**  | 3rd | 1st | 2nd | 4th |
-| **Divination**  | 4th | 3rd | 2nd | 1st |
-| **Magic(WIP NAME)**  | 4th | 3rd | 1st | 2nd |
+| **Witchcraft**  | 4th | 3rd | 2nd | 1st |
+| **Incantations**  | 4th | 3rd | 1st | 2nd |
 
 ##Secondary Stats
 These stats generally change more easily than the primary stats and can often be mended and improved.
