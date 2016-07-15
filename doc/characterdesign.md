@@ -1,4 +1,11 @@
 #Character Design
+[Primary Stats](#primary-stats)
+
+[Secondary Stats](#secondary-stats)
+
+[Defensive Stats](#defensive-stats)
+
+
 ##Primary Stats
 A character has a few base stats. 
 - Physique - How well built a character is. 
