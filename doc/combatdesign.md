@@ -8,6 +8,7 @@ The combat field is divided into **two** five by four (*5x-4y*) rectangles place
 
 ##Combat Targeting
 Any skill have three representations in it's tooltip. 
+
 1. The targetable squares which can be any or all positions in a field.
 2. The positional sqaures which cam be any or all positions in a field.
 3. The area of effect which can be any arbitrary numbers of positions **relative** to the target location. 
