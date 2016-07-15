@@ -1,4 +1,10 @@
 #Damage Types
+[Physical](#physical)
+
+[Elemental](#elemental)
+
+[Special](#special)
+
 There are many damage types. Some are advanced and rare while some are your everyday weapons.
 ##Physical
 Physical damage is split into three categories and resistance is either specified purely as phyiscal or one or more of the subtypes.
