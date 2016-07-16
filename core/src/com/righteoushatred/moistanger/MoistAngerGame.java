@@ -1,6 +1,7 @@
 package com.righteoushatred.moistanger;
 
 import com.badlogic.gdx.Game;
+import com.righteoushatred.moistanger.state.CombatState;
 import com.righteoushatred.moistanger.state.MainGameState;
 import com.righteoushatred.moistanger.state.State;
 
@@ -15,7 +16,7 @@ public class MoistAngerGame extends Game {
 
 	public void create() {
 
-		STATE_MAIN_GAME = new MainGameState(this);
+		STATE_MAIN_GAME = new CombatState(this);
 
 		setState(STATE_MAIN_GAME);
 	}
