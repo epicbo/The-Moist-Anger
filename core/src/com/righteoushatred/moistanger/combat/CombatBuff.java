@@ -14,4 +14,19 @@ public class CombatBuff {
 		return strength;
 	}
 	
+	public String Source() {
+		return source;
+	}
+	
+	public void Override( CombatBuff buff ){
+		Override( buff.strength, buff.duration );
+	}
+	public void Override( double strength, int duration ){
+		if( strength > this.strength ){
+			this.strength = strength;
+		}
+		if( duration > this.duration ){
+			this.duration = duration;
+		}
+	}
 }
