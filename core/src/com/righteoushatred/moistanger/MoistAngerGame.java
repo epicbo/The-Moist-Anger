@@ -1,27 +1,47 @@
 package com.righteoushatred.moistanger;
 
-import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.Game;
+import com.righteoushatred.moistanger.state.MainGameState;
+import com.righteoushatred.moistanger.state.State;
 
-public class MoistAngerGame extends ApplicationAdapter {
-	SpriteBatch batch;
-	Texture img;
-	
-	@Override
-	public void create () {
-		batch = new SpriteBatch();
-		img = new Texture("badlogic.jpg");
+
+
+
+public class MoistAngerGame extends Game {
+
+	public static State STATE_MAIN_GAME;
+
+	private State currentState;
+
+	public void create() {
+
+		STATE_MAIN_GAME = new MainGameState(this);
+
+		setState(STATE_MAIN_GAME);
 	}
 
-	@Override
-	public void render () {
-		Gdx.gl.glClearColor(1, 0, 0, 1);
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		batch.begin();
-		batch.draw(img, 0, 0);
-		batch.end();
+	public void setState(State state) {
+
+		setScreen(state);
+	}
+
+	public void dispose() {
+		super.dispose();
+	}
+
+	public void render() {
+		super.render();
+	}
+
+	public void resize(int width, int height) {
+		super.resize(width, height);
+	}
+
+	public void pause() {
+		super.pause();
+	}
+
+	public void resume() {
+		super.resume();
 	}
 }
