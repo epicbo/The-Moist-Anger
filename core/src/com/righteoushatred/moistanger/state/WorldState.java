@@ -11,6 +11,8 @@ public class WorldState extends State {
 	
 	private World world;
 
+	private float worldOffset;
+	
 	public WorldState(MoistAngerGame game) {
 		this.game = game;
 		
