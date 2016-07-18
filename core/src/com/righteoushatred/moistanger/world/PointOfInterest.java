@@ -6,8 +6,24 @@ public class PointOfInterest {
 	
 	private int y;
 	
-	private String name;
+	private String name = "Unexplored Point of Interest";
 	
-	private String description;
+	private String description = "An interesting place worth exploring.";
+
+	public int getX() {
+		return x;
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
 	
 }

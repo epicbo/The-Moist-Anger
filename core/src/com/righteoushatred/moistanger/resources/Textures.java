@@ -9,7 +9,7 @@ public class Textures {
 
 	private static Hashtable<String, TextureRegion> textures = new Hashtable<String, TextureRegion>(); 
 
-	private static final String path = "data/textures/";
+	private static final String path = "";
 	
 	private static boolean initialized;
 
@@ -65,6 +65,8 @@ public class Textures {
 
 		load("error", "error.png");
 
+		load("blank", "blank.png");
+		
 		load("pointofinterest", "pointofinterest.png");
 		load("world", "world.png");
 	}
