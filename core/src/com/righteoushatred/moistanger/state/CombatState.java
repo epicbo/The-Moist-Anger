@@ -38,6 +38,20 @@ public class CombatState extends State {
 		Gdx.gl.glClearColor(0, 0, 0, 0);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		
+		//Draw background
+		//Draw static-ui
+		//Draw gridmap
+			//Draw area textures
+			//Draw ground effects
+			//Draw entities
+				//Hoovered Buff/Debuff list 
+		//Draw initiative list
+		//Draw active/next PLAYER unit UI
+			//Portrait
+			//Skill icons
+				//Hoovered skill cards
+			//Stats/Wounds/Etc
+			
 		
 	}
 
