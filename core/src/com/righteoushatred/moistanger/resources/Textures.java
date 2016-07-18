@@ -68,6 +68,12 @@ public class Textures {
 		load("blank", "blank.png");
 		
 		load("pointofinterest", "pointofinterest.png");
-		load("world", "world.png");
+		load("world_background", "world_background.png");
+		
+		loadSpritesheet("creature","creatures.png",24,24,18,22);
+		loadSpritesheet("world","world.png",24,24,55,39);
+		loadSpritesheet("item","items.png",16,16,22,16);
+		loadSpritesheet("fxs","fx24.png",24,24,10,20);
+		loadSpritesheet("fxl","fx32.png",32,32,8,11);
 	}
 }

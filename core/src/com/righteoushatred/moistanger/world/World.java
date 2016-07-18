@@ -24,7 +24,7 @@ public class World {
 			PointOfInterest poi = new PointOfInterest();
 			
 			poi.setX((int) (Math.random()*2000));
-			poi.setY((int) (Math.random()*2000));
+			poi.setY((int) (Math.random()*600));
 			
 			pointOfInterests.add(poi);
 			
