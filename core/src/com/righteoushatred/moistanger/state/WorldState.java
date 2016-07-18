@@ -2,11 +2,14 @@ package com.righteoushatred.moistanger.state;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.righteoushatred.moistanger.MoistAngerGame;
+import com.righteoushatred.moistanger.world.World;
 
 public class WorldState extends State {
 
 
 	public MoistAngerGame game;
+	
+	private World world;
 
 	public WorldState(MoistAngerGame game) {
 		this.game = game;
@@ -15,6 +18,8 @@ public class WorldState extends State {
 
 	public void enter() {
 
+		//TODO: Add world gen
+		world = new World();
 	}
 
 	public void leave() {
