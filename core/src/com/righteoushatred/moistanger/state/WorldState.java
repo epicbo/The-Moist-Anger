@@ -3,12 +3,12 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.righteoushatred.moistanger.MoistAngerGame;
 
-public class MainGameState extends State {
+public class WorldState extends State {
 
 
 	public MoistAngerGame game;
 
-	public MainGameState(MoistAngerGame game) {
+	public WorldState(MoistAngerGame game) {
 		this.game = game;
 		
 	}
