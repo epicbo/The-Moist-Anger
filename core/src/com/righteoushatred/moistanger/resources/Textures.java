@@ -10,9 +10,15 @@ public class Textures {
 	private static Hashtable<String, TextureRegion> textures = new Hashtable<String, TextureRegion>(); 
 
 	private static final String path = "data/textures/";
+	
+	private static boolean initialized;
 
 	public static TextureRegion get(String id) {
 
+		if (!initialized) {
+			init();
+			initialized = true;
+		}
 		
 		if (id == null || textures.get(id) == null) {
 			System.out.println("Could not load texture: "+id);
