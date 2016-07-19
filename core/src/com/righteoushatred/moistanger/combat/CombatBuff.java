@@ -1,11 +1,19 @@
 package com.righteoushatred.moistanger.combat;
 
 public class CombatBuff {
+	public CombatBuff(String type, String source, double strength, int duration) {
+		this.type = type;
+		this.source = source;
+		this.strength = strength;
+		this.duration = duration;
+	}
+	
 	private String type;
 	private String source;
 	private double strength;
 	private int duration;
-
+	
+	
 	public String Type() {
 		return type;
 	}
