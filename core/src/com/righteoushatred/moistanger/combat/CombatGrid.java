@@ -19,9 +19,24 @@ public class CombatGrid {
 	public CombatGrid() {
 		playerCharacters = new CombatCharacter[4][5];
 		enemyCharacters = new CombatCharacter[4][5];
+		
+		playerCharacters[0][0] = new CombatCharacter();
+		playerCharacters[1][1] = new CombatCharacter();
+		playerCharacters[2][2] = new CombatCharacter();
+		playerCharacters[3][3] = new CombatCharacter();
+		
+
+		enemyCharacters[0][0] = new CombatCharacter();
+		enemyCharacters[1][1] = new CombatCharacter();
+		enemyCharacters[2][2] = new CombatCharacter();
+		enemyCharacters[3][3] = new CombatCharacter();
 	}
 
 	public CombatCharacter[][] getPlayerCharacters() {
 		return playerCharacters;
+	}
+	
+	public CombatCharacter[][] getEnemyCharacters() {
+		return enemyCharacters;
 	}
 }
