@@ -64,6 +64,40 @@ public abstract class CombatEntity {
 		}
 		return temp;
 	}
+	public CombatEntity(){
+		this(1,1,1,1,1);
+	}
+	public CombatEntity(int basePhysique, int baseNimbleness,
+			int baseJudgement, int baseGlamour,
+			int baseInitiative) {
+		buffs = new ArrayList<CombatBuff>();
+		this.basePhysique = basePhysique;
+		this.baseNimbleness = baseNimbleness;
+		this.baseJudgement = baseJudgement;
+		this.baseGlamour = baseGlamour;
+		this.baseInitiative = baseInitiative;
+	}
+	private int basePhysique;
+	private int baseNimbleness;
+	private int baseJudgement;
+	private int baseGlamour;
+	
+	private int baseInitiative;
+	
+	private ArrayList<CombatBuff> buffs;
+	
+	public int Physique() {
+		return basePhysique + (int)CalcStat("physique");
+	}
+	public int Nimbleness() {
+		return baseNimbleness + (int)CalcStat("nimbleness");
+	}
+	public int Judgement() {
+		return baseJudgement + (int)CalcStat("judgement");
+	}
+	public int Glamour() {
+		return baseGlamour + (int)CalcStat("glamour");
+	}	
 	
 	public void AddBuff( CombatBuff buff ){
 		AddBuff( buff, false );

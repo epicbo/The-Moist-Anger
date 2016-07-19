@@ -1,5 +1,7 @@
 package com.righteoushatred.moistanger.combat;
 
+import com.righteoushatred.moistanger.Constants;
+
 public class CombatGrid {
 	
 	/**
@@ -17,8 +19,8 @@ public class CombatGrid {
 	CombatCharacter[][] enemyCharacters; 
 	
 	public CombatGrid() {
-		playerCharacters = new CombatCharacter[4][5];
-		enemyCharacters = new CombatCharacter[4][5];
+		playerCharacters = new CombatCharacter[Constants.gridx][Constants.gridy];
+		enemyCharacters = new CombatCharacter[Constants.gridx][Constants.gridy];
 	}
 
 	public CombatCharacter[][] getPlayerCharacters() {
