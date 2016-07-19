@@ -35,8 +35,8 @@ public class World {
 	
 	public void render(SpriteBatch batch, float worldOffset) {
 		
-		batch.draw(Textures.get("world"), 0 - worldOffset, 0);
-		batch.draw(Textures.get("world"), 0 - worldOffset + Textures.get("world").getRegionWidth(), 0);
+		batch.draw(Textures.get("world_background"), 0 - worldOffset, 0);
+		batch.draw(Textures.get("world_background"), 0 - worldOffset + Textures.get("world_background").getRegionWidth(), 0);
 		
 		PointOfInterest hoveredPOI = null;
 		
