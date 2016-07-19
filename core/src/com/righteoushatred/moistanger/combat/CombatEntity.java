@@ -73,10 +73,7 @@ public abstract class CombatEntity {
 	}
 	
 	public void AddBuff( CombatBuff buff ){
-		AddBuff( buff, false );
-	}
-	public void AddBuff( CombatBuff buff, Boolean stacking ){
-		if( stacking ){
+		if( buff.Stacking() ){
 			buffs.add(buff);
 		}
 		else{

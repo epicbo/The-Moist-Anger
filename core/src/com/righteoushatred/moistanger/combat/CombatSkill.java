@@ -6,6 +6,7 @@ public class CombatSkill {
 	private String name;
 	private ArrayList<CombatBuff> effects;
 	private double damageMultiplier;
+	private double criticalModifier;
 	private double accuracyModifier;
 	private BoolGrid ActorPositions;
 	private BoolGrid TargetPositions;
@@ -15,7 +16,10 @@ public class CombatSkill {
 		effects = new ArrayList<CombatBuff>();
 	}
 	public void AddEffect( CombatBuff effect ){
-		
 		effects.add( effect );
+	}
+	public void Update(){
+		if( CurrentCooldown > 0 )
+			CurrentCooldown--;
 	}
 }
