@@ -1,6 +1,7 @@
 package com.righteoushatred.moistanger.state;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.righteoushatred.moistanger.MoistAngerGame;
@@ -18,6 +19,8 @@ public class CombatState extends State {
 	private CombatGrid grid;
 
 	private CombatCharacter selectedCharacter;
+	
+	private BitmapFont tempFont;
 
 	public CombatState(MoistAngerGame game) {
 		this.game = game;
@@ -27,6 +30,7 @@ public class CombatState extends State {
 	public void enter() {
 		batch = new SpriteBatch();
 		grid = new CombatGrid();
+		tempFont = new BitmapFont();
 	}
 
 	public void leave() {
@@ -98,6 +102,13 @@ public class CombatState extends State {
 
 				}
 			}
+		
+		if (selectedCharacter != null) {
+			tempFont.draw(batch, "Physique: "+selectedCharacter.getPhysique(), Gdx.graphics.getWidth()-200, 150);
+			tempFont.draw(batch, "Nibleness: "+selectedCharacter.getNimbleness(), Gdx.graphics.getWidth()-200, 130);
+			tempFont.draw(batch, "Judgement: "+selectedCharacter.getJudgement(), Gdx.graphics.getWidth()-200, 110);
+			tempFont.draw(batch, "Glamour: "+selectedCharacter.getGlamour(), Gdx.graphics.getWidth()-200, 90);
+		}
 
 		batch.end();
 	}
