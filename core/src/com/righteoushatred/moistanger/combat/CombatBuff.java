@@ -18,19 +18,19 @@ public class CombatBuff {
 	public void setSource( String source ){
 		this.source = source;
 	}
-	public Boolean stacking(){
+	public Boolean getStacking(){
 		return stacking;
 	}
 	
-	public String type() {
+	public String getType() {
 		return type;
 	}
 	
-	public double strength(){
+	public double getStrength(){
 		return strength;
 	}
 	
-	public String source() {
+	public String getSource() {
 		return source;
 	}
 	
