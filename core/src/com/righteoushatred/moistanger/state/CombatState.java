@@ -108,6 +108,34 @@ public class CombatState extends State {
 			tempFont.draw(batch, "Nibleness: "+selectedCharacter.getNimbleness(), Gdx.graphics.getWidth()-200, 130);
 			tempFont.draw(batch, "Judgement: "+selectedCharacter.getJudgement(), Gdx.graphics.getWidth()-200, 110);
 			tempFont.draw(batch, "Glamour: "+selectedCharacter.getGlamour(), Gdx.graphics.getWidth()-200, 90);
+			
+			tempFont.draw(batch, "Initiative: "+selectedCharacter.getInitiative(), Gdx.graphics.getWidth()-200, 50);
+		}
+		
+		int initiativeListIconSize = 48;
+		
+		for (int i = 0; i<grid.getCharacters().size(); i++) {
+			int index = (i + grid.currentCharacter) % grid.getCharacters().size();
+			
+			CombatCharacter cc = grid.getCharacters().get(index);
+			
+			batch.setColor(1,1,1,1);
+			
+			batch.draw(Textures.get(cc.getTexture()), 
+					Gdx.graphics.getWidth()/2f - (initiativeListIconSize*grid.getCharacters().size())/2f + initiativeListIconSize*i,
+					Gdx.graphics.getHeight() - 100,
+					initiativeListIconSize, 
+					initiativeListIconSize);
+			
+			if (i == 0)
+				batch.setColor(0.5f, 1, 0.5f, 1);
+			
+			batch.draw(Textures.get("square"), 
+					Gdx.graphics.getWidth()/2f - (initiativeListIconSize*grid.getCharacters().size())/2f + initiativeListIconSize*i,
+					Gdx.graphics.getHeight() - 100,
+					initiativeListIconSize, 
+					initiativeListIconSize);
+			
 		}
 
 		batch.end();
