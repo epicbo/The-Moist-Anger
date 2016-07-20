@@ -32,41 +32,36 @@ public abstract class CombatEntity {
 		this.baseInitiative = baseInitiative;
 	}
 	
-	public int Physique() {
-		return basePhysique + (int)CalcStat("physique");
+	public int physique() {
+		return basePhysique + (int)calcStat("physique");
 	}
-	
-	public int Nimbleness() {
-		return baseNimbleness + (int)CalcStat("nimbleness");
+	public int nimbleness() {
+		return baseNimbleness + (int)calcStat("nimbleness");
 	}
-	
-	public int Judgement() {
-		return baseJudgement + (int)CalcStat("judgement");
+	public int judgement() {
+		return baseJudgement + (int)calcStat("judgement");
 	}
-	
-	public int Glamour() {
-		return baseGlamour + (int)CalcStat("glamour");
+	public int glamour() {
+		return baseGlamour + (int)calcStat("glamour");
 	}	
 	
-	public int Initiative(){
-		return baseInitiative + (int)CalcStat("initiative");
+	public int initiative(){
+		return baseInitiative + (int)calcStat("initiative");
 	}
 	
-	public CombatBuff HasBuff( CombatBuff buff ) {
-		return HasBuff( buff.Type(), buff.Source() );
+	public CombatBuff hasBuff( CombatBuff buff ) {
+		return hasBuff( buff.type(), buff.source() );
 	}
-	
-	public CombatBuff HasBuff( String type ){
-		return HasBuff( type, "" );
+	public CombatBuff hasBuff( String type ){
+		return hasBuff( type, "" );
 	}
-	
-	public CombatBuff HasBuff( String type, String Source ){
+	public CombatBuff hasBuff( String type, String Source ){
 		for( CombatBuff b : buffs ){
-			if( b.Type().equals(type) ){
+			if( b.type().equals(type) ){
 				if( Source.equals("") ){
 					return b;
 				}
-				else if( b.Source().equals(Source) ){
+				else if( b.source().equals(Source) ){
 					return b;
 				}
 			}
@@ -74,28 +69,24 @@ public abstract class CombatEntity {
 		return null;
 	}
 	
-	private double CalcStat( String type ){
+	private double calcStat( String type ){
 		double temp = 0;
 		for( CombatBuff b : buffs ){
-			if( b.Type().equals(type) ){
-				temp += b.Strength();
+			if( b.type().equals(type) ){
+				temp += b.strength();
 			}
 		}
 		return temp;
 	}
-
-	public void AddBuff( CombatBuff buff ){
-		AddBuff( buff, false );
-	}
 	
-	public void AddBuff( CombatBuff buff, Boolean stacking ){
-		if( stacking ){
+	public void addBuff( CombatBuff buff ){
+		if( buff.stacking() ){
 			buffs.add(buff);
 		}
 		else{
-			CombatBuff temp = HasBuff( buff );
+			CombatBuff temp = hasBuff( buff );
 			if( temp != null ){
-				temp.Override( buff );
+				temp.override( buff );
 			}
 			else{
 				buffs.add(buff);
