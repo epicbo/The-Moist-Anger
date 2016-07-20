@@ -3,9 +3,24 @@ package com.righteoushatred.moistanger.combat;
 import java.util.ArrayList;
 
 public abstract class CombatEntity {
+	private int basePhysique;
+	private int baseNimbleness;
+	private int baseJudgement;
+	private int baseGlamour;
+	
+	private int minSanity;
+	private int maxSanity;
+	private int sanity;
+	
+	private int baseInitiative;
+	private int endurance;
+	
+	private ArrayList<CombatBuff> buffs;
+	
 	public CombatEntity(){
 		this(1,1,1,1,1);
 	}
+	
 	public CombatEntity(int basePhysique, int baseNimbleness,
 			int baseJudgement, int baseGlamour,
 			int baseInitiative) {
@@ -16,14 +31,6 @@ public abstract class CombatEntity {
 		this.baseGlamour = baseGlamour;
 		this.baseInitiative = baseInitiative;
 	}
-	private int basePhysique;
-	private int baseNimbleness;
-	private int baseJudgement;
-	private int baseGlamour;
-	
-	private int baseInitiative;
-	
-	private ArrayList<CombatBuff> buffs;
 	
 	public int physique() {
 		return basePhysique + (int)calcStat("physique");
