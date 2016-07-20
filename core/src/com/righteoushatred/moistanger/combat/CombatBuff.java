@@ -15,29 +15,29 @@ public class CombatBuff {
 	private int duration;
 	private Boolean stacking;
 	
-	public void SetSource( String source ){
+	public void setSource( String source ){
 		this.source = source;
 	}
-	public Boolean Stacking(){
+	public Boolean stacking(){
 		return stacking;
 	}
 	
-	public String Type() {
+	public String type() {
 		return type;
 	}
 	
-	public double Strength(){
+	public double strength(){
 		return strength;
 	}
 	
-	public String Source() {
+	public String source() {
 		return source;
 	}
 	
-	public void Override( CombatBuff buff ){
-		Override( buff.strength, buff.duration );
+	public void override( CombatBuff buff ){
+		override( buff.strength, buff.duration );
 	}
-	public void Override( double strength, int duration ){
+	public void override( double strength, int duration ){
 		if( strength > this.strength ){
 			this.strength = strength;
 		}

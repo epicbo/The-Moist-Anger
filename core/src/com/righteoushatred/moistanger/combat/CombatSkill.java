@@ -15,11 +15,14 @@ public class CombatSkill {
 	CombatSkill(){
 		effects = new ArrayList<CombatBuff>();
 	}
-	public void AddEffect( CombatBuff effect ){
+	public void addEffect( CombatBuff effect ){
 		effects.add( effect );
 	}
-	public void Update(){
-		if( CurrentCooldown > 0 )
+	public Boolean update(){
+		if( CurrentCooldown > 1 )
 			CurrentCooldown--;
+		else
+			return true;
+		return false;
 	}
 }
