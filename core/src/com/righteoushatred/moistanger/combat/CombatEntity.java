@@ -17,10 +17,6 @@ public abstract class CombatEntity {
 	
 	private ArrayList<CombatBuff> buffs;
 	
-	public CombatEntity(){
-		this(1,1,1,1,1);
-	}
-	
 	public CombatEntity(int basePhysique, int baseNimbleness,
 			int baseJudgement, int baseGlamour,
 			int baseInitiative) {
@@ -50,18 +46,18 @@ public abstract class CombatEntity {
 	}
 	
 	public CombatBuff hasBuff( CombatBuff buff ) {
-		return hasBuff( buff.type(), buff.source() );
+		return hasBuff( buff.getType(), buff.getSource() );
 	}
 	public CombatBuff hasBuff( String type ){
 		return hasBuff( type, "" );
 	}
 	public CombatBuff hasBuff( String type, String Source ){
 		for( CombatBuff b : buffs ){
-			if( b.type().equals(type) ){
+			if( b.getType().equals(type) ){
 				if( Source.equals("") ){
 					return b;
 				}
-				else if( b.source().equals(Source) ){
+				else if( b.getSource().equals(Source) ){
 					return b;
 				}
 			}
@@ -72,15 +68,15 @@ public abstract class CombatEntity {
 	private double calcStat( String type ){
 		double temp = 0;
 		for( CombatBuff b : buffs ){
-			if( b.type().equals(type) ){
-				temp += b.strength();
+			if( b.getType().equals(type) ){
+				temp += b.getStrength();
 			}
 		}
 		return temp;
 	}
 	
 	public void addBuff( CombatBuff buff ){
-		if( buff.stacking() ){
+		if( buff.getStacking() ){
 			buffs.add(buff);
 		}
 		else{
