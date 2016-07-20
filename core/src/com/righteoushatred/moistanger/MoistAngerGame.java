@@ -16,7 +16,7 @@ public class MoistAngerGame extends Game {
 
 	public void create() {
 
-		STATE_MAIN_GAME = new WorldState(this);
+		STATE_MAIN_GAME = new CombatState(this);
 
 		setState(STATE_MAIN_GAME);
 	}

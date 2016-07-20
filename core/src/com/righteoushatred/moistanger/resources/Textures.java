@@ -70,6 +70,8 @@ public class Textures {
 		load("pointofinterest", "pointofinterest.png");
 		load("world_background", "world_background.png");
 		
+		load("square", "square.png");
+		
 		loadSpritesheet("creature","creatures.png",24,24,18,22);
 		loadSpritesheet("world","world.png",24,24,55,39);
 		loadSpritesheet("item","items.png",16,16,22,16);
