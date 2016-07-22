@@ -71,10 +71,16 @@ public class CombatState extends State {
 		for (int x = 0; x<grid.getPlayerCharacters().length; x++)
 			for (int y = 0; y<grid.getPlayerCharacters()[0].length; y++) {
 
-				batch.setColor(1, 1, 1, 1);
 
+				if (grid.getCharacters().get(grid.currentCharacter) == grid.getPlayerCharacters()[x][y])
+
+					batch.setColor(0.5f, 1, 0.5f, 1);
+				else
+					batch.setColor(1, 1, 1, 1);
 				batch.draw(Textures.get("square"), 111 + (squareSize*3 - squareSize*x), 250 + squareSize*y, squareSize, squareSize);
 
+				batch.setColor(1, 1, 1, 1);
+				
 				if (grid.getPlayerCharacters()[x][y] != null) {
 
 					if (selectedCharacter == grid.getPlayerCharacters()[x][y] && selectedCharacter != null)
