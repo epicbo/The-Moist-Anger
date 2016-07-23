@@ -9,14 +9,14 @@ public class BoolGrid {
 		grid = new Boolean[Constants.gridx][Constants.gridy];
 	}
 	
-	Boolean Check( int x, int y ){
+	Boolean check( int x, int y ){
 		if( x >= 0 && x < Constants.gridx &&
 			y >= 0 && y < Constants.gridy ){
 			return grid[x][y];
 		}
 		return false;
 	}
-	void Set( int x, int y, Boolean value ){
+	void set( int x, int y, Boolean value ){
 		if( x >= 0 && x < Constants.gridx &&
 			y >= 0 && y < Constants.gridy ){
 			grid[x][y] = value;
