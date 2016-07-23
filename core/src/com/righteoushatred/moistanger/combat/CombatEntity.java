@@ -7,13 +7,7 @@ public abstract class CombatEntity {
 	private int baseNimbleness;
 	private int baseJudgement;
 	private int baseGlamour;
-	
-	private int minSanity;
-	private int maxSanity;
-	private int sanity;
-	
 	private int baseInitiative;
-	private int endurance;
 	
 	private ArrayList<CombatBuff> buffs;
 	
