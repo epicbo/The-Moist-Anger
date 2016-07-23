@@ -12,6 +12,22 @@ public class CombatCharacter extends CombatEntity {
 		sanity = minSanity;
 		endurance = 0;
 	}
+	public int getMinSanity() {
+		return minSanity;
+	}
+	public int getMaxSanity() {
+		return maxSanity;
+	}
+	public int getSanity() {
+		return sanity;
+	}
+	public int getEndurance() {
+		return endurance;
+	}
+	public void modifySanity( int amount ){
+		sanity += amount;
+		sanity = Math.max(minSanity, Math.min(maxSanity, sanity));
+	}
 	private int minSanity;
 	private int maxSanity;
 	private int sanity;
