@@ -22,20 +22,20 @@ public abstract class CombatEntity {
 		this.baseInitiative = baseInitiative;
 	}
 	
-	public int physique() {
+	public int getPhysique() {
 		return basePhysique + (int)calcStat("physique");
 	}
-	public int nimbleness() {
+	public int getNimbleness() {
 		return baseNimbleness + (int)calcStat("nimbleness");
 	}
-	public int judgement() {
+	public int getJudgement() {
 		return baseJudgement + (int)calcStat("judgement");
 	}
-	public int glamour() {
+	public int getGlamour() {
 		return baseGlamour + (int)calcStat("glamour");
 	}	
 	
-	public int initiative(){
+	public int getInitiative(){
 		return baseInitiative + (int)calcStat("initiative");
 	}
 	
