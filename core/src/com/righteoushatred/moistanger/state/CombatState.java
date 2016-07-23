@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.righteoushatred.moistanger.MoistAngerGame;
 import com.righteoushatred.moistanger.combat.CombatCharacter;
+import com.righteoushatred.moistanger.combat.CombatEntity;
 import com.righteoushatred.moistanger.combat.CombatGrid;
 import com.righteoushatred.moistanger.resources.Textures;
 
@@ -18,7 +19,7 @@ public class CombatState extends State {
 
 	private CombatGrid grid;
 
-	private CombatCharacter selectedCharacter;
+	private CombatEntity selectedCharacter;
 	
 	private BitmapFont tempFont;
 
@@ -123,7 +124,7 @@ public class CombatState extends State {
 		for (int i = 0; i<grid.getCharacters().size(); i++) {
 			int index = (i + grid.currentCharacter) % grid.getCharacters().size();
 			
-			CombatCharacter cc = grid.getCharacters().get(index);
+			CombatEntity cc = grid.getCharacters().get(index);
 			
 			batch.setColor(1,1,1,1);
 			
