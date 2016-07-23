@@ -77,5 +77,17 @@ public class Textures {
 		loadSpritesheet("item","items.png",16,16,22,16);
 		loadSpritesheet("fxs","fx24.png",24,24,10,20);
 		loadSpritesheet("fxl","fx32.png",32,32,8,11);
+		
+		//UI
+		load("ui_component_sw", "uicomponent.png",0,0,1/4f,1/4f);
+		load("ui_component_s", "uicomponent.png",1/4f,0,2/4f,1/4f);
+		load("ui_component_se", "uicomponent.png",2/4f,0,3/4f,1/4f);
+		load("ui_component_w", "uicomponent.png",0,1/4f,1/4f,2/4f);
+		load("ui_component_c", "uicomponent.png",1/4f,1/4f,2/4f,2/4f);
+		load("ui_component_e", "uicomponent.png",2/4f,1/4f,3/4f,2/4f);
+		load("ui_component_nw", "uicomponent.png",0,2/4f,1/4f,3/4f);
+		load("ui_component_n", "uicomponent.png",1/4f,2/4f,2/4f,3/4f);
+		load("ui_component_ne", "uicomponent.png",2/4f,2/4f,3/4f,3/4f);
+		load("ui_component_c2", "uicomponent.png",0,3/4f,1/4f,4/4f);
 	}
 }
