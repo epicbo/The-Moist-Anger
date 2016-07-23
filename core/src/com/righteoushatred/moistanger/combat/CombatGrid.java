@@ -1,5 +1,8 @@
 package com.righteoushatred.moistanger.combat;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+
 import com.righteoushatred.moistanger.Constants;
 
 public class CombatGrid {
@@ -18,12 +21,68 @@ public class CombatGrid {
 	 */
 	CombatCharacter[][] enemyCharacters; 
 	
+	private ArrayList<CombatCharacter> characters;
+	
+	Comparator<CombatCharacter> initiativeSorter;
+	
+	//TODO make private
+	public int currentCharacter;
+	
 	public CombatGrid() {
+		
 		playerCharacters = new CombatCharacter[Constants.gridx][Constants.gridy];
 		enemyCharacters = new CombatCharacter[Constants.gridx][Constants.gridy];
+		
+		playerCharacters[0][0] = new CombatCharacter();
+		playerCharacters[1][1] = new CombatCharacter();
+		playerCharacters[2][2] = new CombatCharacter();
+		playerCharacters[3][3] = new CombatCharacter();
+		
+
+		enemyCharacters[0][0] = new CombatCharacter();
+		enemyCharacters[1][1] = new CombatCharacter();
+		enemyCharacters[2][2] = new CombatCharacter();
+		enemyCharacters[3][3] = new CombatCharacter();
+		
+		characters = new ArrayList<CombatCharacter>();
+		
+		characters.add(playerCharacters[0][0]);
+		characters.add(playerCharacters[1][1]);
+		characters.add(playerCharacters[2][2]);
+		characters.add(playerCharacters[3][3]);
+
+		characters.add(playerCharacters[0][0]);
+		characters.add(playerCharacters[1][1]);
+		characters.add(playerCharacters[2][2]);
+		characters.add(playerCharacters[3][3]);
+		
+		initiativeSorter = new Comparator<CombatCharacter>() {
+			
+			@Override
+			public int compare(CombatCharacter o1, CombatCharacter o2) {
+				if (o1.getInitiative() > o2.getInitiative())
+					return -1;
+				else if (o1.getInitiative() < o2.getInitiative())
+					return 1;
+				else
+					return 0;
+			}
+		};
+		
+		characters.sort(initiativeSorter);
+		
+		
 	}
 
 	public CombatCharacter[][] getPlayerCharacters() {
 		return playerCharacters;
+	}
+	
+	public CombatCharacter[][] getEnemyCharacters() {
+		return enemyCharacters;
+	}
+
+	public ArrayList<CombatCharacter> getCharacters() {
+		return characters;
 	}
 }
