@@ -1,7 +1,7 @@
-package com.righteoushatred.moistanger.ui.component;
+package com.righteoushatred.moistanger.ui;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.episkbo.descend.resources.Textures;
+import com.righteoushatred.moistanger.resources.Textures;
 
 
 

@@ -1,10 +1,8 @@
-package com.righteoushatred.moistanger.ui.component;
+package com.righteoushatred.moistanger.ui;
 
 import java.util.ArrayList;
 
-import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.episkbo.episkui.UIManager;
                 
 public abstract class UIComponent {
 
