@@ -19,11 +19,11 @@ public class CombatGrid {
 	 * The format is Tile[x][y], where x is which row the character is on, 0 being the front row closest to the enemy. 
 	 * y is which position on the row the character is on.
 	 */
-	CombatCharacter[][] enemyCharacters; 
+	CombatEnemy[][] enemyCharacters; 
 	
-	private ArrayList<CombatCharacter> characters;
+	private ArrayList<CombatEntity> characters;
 	
-	Comparator<CombatCharacter> initiativeSorter;
+	Comparator<CombatEntity> initiativeSorter;
 	
 	//TODO make private
 	public int currentCharacter;
@@ -31,20 +31,20 @@ public class CombatGrid {
 	public CombatGrid() {
 		
 		playerCharacters = new CombatCharacter[Constants.gridx][Constants.gridy];
-		enemyCharacters = new CombatCharacter[Constants.gridx][Constants.gridy];
+		enemyCharacters = new CombatEnemy[Constants.gridx][Constants.gridy];
 		
-		playerCharacters[0][0] = new CombatCharacter();
-		playerCharacters[1][1] = new CombatCharacter();
-		playerCharacters[2][2] = new CombatCharacter();
-		playerCharacters[3][3] = new CombatCharacter();
+		playerCharacters[0][0] = new CombatCharacter(1, 2, 3, 4, 5, 6, 7);
+		playerCharacters[1][1] = new CombatCharacter(1, 2, 3, 4, 5, 6, 7);;
+		playerCharacters[2][2] = new CombatCharacter(1, 2, 3, 4, 5, 6, 7);
+		playerCharacters[3][3] = new CombatCharacter(1, 2, 3, 4, 5, 6, 7);
 		
 
-		enemyCharacters[0][0] = new CombatCharacter();
-		enemyCharacters[1][1] = new CombatCharacter();
-		enemyCharacters[2][2] = new CombatCharacter();
-		enemyCharacters[3][3] = new CombatCharacter();
+		enemyCharacters[0][0] = new CombatEnemy(1, 2, 3, 4, 5);
+		enemyCharacters[1][1] = new CombatEnemy(1, 2, 3, 4, 5);
+		enemyCharacters[2][2] = new CombatEnemy(1, 2, 3, 4, 5);
+		enemyCharacters[3][3] = new CombatEnemy(1, 2, 3, 4, 5);
 		
-		characters = new ArrayList<CombatCharacter>();
+		characters = new ArrayList<CombatEntity>();
 		
 		characters.add(playerCharacters[0][0]);
 		characters.add(playerCharacters[1][1]);
@@ -56,10 +56,10 @@ public class CombatGrid {
 		characters.add(playerCharacters[2][2]);
 		characters.add(playerCharacters[3][3]);
 		
-		initiativeSorter = new Comparator<CombatCharacter>() {
+		initiativeSorter = new Comparator<CombatEntity>() {
 			
 			@Override
-			public int compare(CombatCharacter o1, CombatCharacter o2) {
+			public int compare(CombatEntity o1, CombatEntity o2) {
 				if (o1.getInitiative() > o2.getInitiative())
 					return -1;
 				else if (o1.getInitiative() < o2.getInitiative())
@@ -78,11 +78,11 @@ public class CombatGrid {
 		return playerCharacters;
 	}
 	
-	public CombatCharacter[][] getEnemyCharacters() {
+	public CombatEnemy[][] getEnemyCharacters() {
 		return enemyCharacters;
 	}
 
-	public ArrayList<CombatCharacter> getCharacters() {
+	public ArrayList<CombatEntity> getCharacters() {
 		return characters;
 	}
 }
