@@ -33,16 +33,16 @@ public class CombatGrid {
 		playerCharacters = new CombatCharacter[Constants.gridx][Constants.gridy];
 		enemyCharacters = new CombatCharacter[Constants.gridx][Constants.gridy];
 		
-		playerCharacters[0][0] = new CombatCharacter();
-		playerCharacters[1][1] = new CombatCharacter();
-		playerCharacters[2][2] = new CombatCharacter();
-		playerCharacters[3][3] = new CombatCharacter();
+		playerCharacters[0][0] = new CombatCharacter(1,1,1,1,1,1,1);
+		playerCharacters[1][1] = new CombatCharacter(1,1,1,1,1,1,1);
+		playerCharacters[2][2] = new CombatCharacter(1,1,1,1,1,1,1);
+		playerCharacters[3][3] = new CombatCharacter(1,1,1,1,1,1,1);
 		
 
-		enemyCharacters[0][0] = new CombatCharacter();
-		enemyCharacters[1][1] = new CombatCharacter();
-		enemyCharacters[2][2] = new CombatCharacter();
-		enemyCharacters[3][3] = new CombatCharacter();
+		enemyCharacters[0][0] = new CombatCharacter(1,1,1,1,1,1,1);
+		enemyCharacters[1][1] = new CombatCharacter(1,1,1,1,1,1,1);
+		enemyCharacters[2][2] = new CombatCharacter(1,1,1,1,1,1,1);
+		enemyCharacters[3][3] = new CombatCharacter(1,1,1,1,1,1,1);
 		
 		characters = new ArrayList<CombatCharacter>();
 		
