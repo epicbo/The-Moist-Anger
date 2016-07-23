@@ -9,6 +9,16 @@ public abstract class CombatEntity {
 	private int baseGlamour;
 	private int baseInitiative;
 	
+	private String texture = "creature0,0";
+
+	public String getTexture() {
+		return texture;
+	}
+
+	public void setTexture(String texture) {
+		this.texture = texture;
+	}
+	
 	private ArrayList<CombatBuff> buffs;
 	
 	public CombatEntity(int basePhysique, int baseNimbleness,
