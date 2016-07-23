@@ -50,14 +50,12 @@ public class Button extends UIComponent {
 
 		if (text != null) {
 
-			float tw = FontRenderer.getTextWidth(text, 2, 1);
-			float th = FontRenderer.getTextHeight(2);
 			float offset = 0;
 
 			if (pressed)
 				offset = 2;
 
-			FontRenderer.renderText(batch, text, (int)(x+width/2f-tw/2f+offset), (int)(y+height/2f-th/2f-offset), 2, 1);
+			FontRenderer.draw(batch, text, (int)(x+width/2f+offset), (int)(y+height/2f-offset), true);
 
 		}
 	}

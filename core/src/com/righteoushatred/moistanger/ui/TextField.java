@@ -52,13 +52,13 @@ public class TextField extends UIComponent {
 		batch.draw(Textures.get("ui_component_s"),x+borderWidth, y + height - borderWidth, width - borderWidth*2, borderWidth);
 		batch.draw(Textures.get("ui_component_ne"),x+width-borderWidth, y + height - borderWidth, borderWidth, borderWidth);
 
-		float th = FontRenderer.getTextHeight(2);
-		float tw = FontRenderer.getTextWidth(text, 2, 1);
+		float th = FontRenderer.getTextHeight(text);
+		float tw = FontRenderer.getTextWidth(text);
 
 		if (text != null) {
 
 			batch.setColor(0.1f,0.1f,0.1f,1);
-			FontRenderer.renderText(batch, text, (int) (x + borderWidth*2+5), (int) (y+height/2f-th/2f), 2, 1);
+			FontRenderer.draw(batch, text, (int) (x + borderWidth*2+5), (int) (y+height/2f-th/2f));
 			batch.setColor(1,1,1,1);
 		}
 

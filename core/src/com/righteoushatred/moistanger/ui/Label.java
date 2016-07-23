@@ -7,20 +7,14 @@ public class Label extends UIComponent {
 
 	protected String text;
 	
-	protected int scale;
-	
-	protected int spacing;
-	
 	protected float r, g, b, a;
 	
 	protected boolean centered;
 	
-	public Label(String text, float x, float y, int scale, int spacing) {
+	public Label(String text, float x, float y) {
 		this.x = x;
 		this.y = y;
 		this.text = text;
-		this.spacing = spacing;
-		this.scale = scale;
 		r = g = b = 0.1f;
 		a = 1;
 		centered = true;
@@ -35,12 +29,12 @@ public class Label extends UIComponent {
 		if (text != null) {
 			
 			batch.setColor(r, g, b, a);
-			float tw = FontRenderer.getTextWidth(text, scale, spacing);
-			float th = FontRenderer.getTextHeight(scale);
+			float tw = FontRenderer.getTextWidth(text);
+			float th = FontRenderer.getTextHeight(text);
 			if (centered)
-				FontRenderer.renderText(batch, text, (int)(x+width/2f-tw/2f), (int)(y+height/2f-th/2f), scale, spacing);
+				FontRenderer.draw(batch, text, (int)(x+width/2f-tw/2f), (int)(y+height/2f-th/2f));
 			else
-				FontRenderer.renderText(batch, text, x, (int)(y+height/2f-th/2f), scale, spacing);
+				FontRenderer.draw(batch, text, x, (int)(y+height/2f-th/2f));
 			batch.setColor(1,1,1,1);
 		}
 	}
